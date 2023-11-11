@@ -1,5 +1,4 @@
 Flask==2.2.2
-opencv-python==4.8.1.78
 Pillow==9.5.0
 pytgbot==5.7
 python-dotenv==1.0.0
