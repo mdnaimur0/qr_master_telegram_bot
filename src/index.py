@@ -17,7 +17,3 @@ def handle_webhook():
     update = bot.Update.from_array(request.json)
     bot.handle_update(update)
     return "ok", 200
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0")
