@@ -3,8 +3,10 @@ from models import User
 from pytgbot.api_types.receivable.updates import Update, Message
 from pytgbot.api_types.sendable.files import InputFileFromDisk
 import os, strings, qrcode_util, time, db
+import config
 
-bot = Bot(os.getenv("BOT_TOKEN"))
+BOT_TOKEN = config.BOT_TOKEN
+bot = Bot(BOT_TOKEN)
 
 IS_SERVICE_AVAILABLE = True
 
@@ -108,7 +110,7 @@ def handle_nontext_message(message: Message):
     if message.photo is not None:
         file_id = message.photo[0].file_id
         file = bot.get_file(file_id)
-        url = file.get_download_url(os.getenv("BOT_TOKEN"))
+        url = file.get_download_url(BOT_TOKEN)
         _ = set_typing(chat_id)
         text = qrcode_util.extract_text_from_qr_code_url(url)
         bot.send_message(

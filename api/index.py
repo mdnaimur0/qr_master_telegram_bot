@@ -1,10 +1,8 @@
 from flask import Flask, request
-from dotenv import load_dotenv
 from pytgbot.api_types.receivable.updates import Update
 from tgbot import handle_update
 
 
-load_dotenv()
 app = Flask(__name__)
 
 
