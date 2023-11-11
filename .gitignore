@@ -1,0 +1,7 @@
+
+/.vscode
+/temp
+/.env
+/test.py
+/__pycache__
+/dummy.py
