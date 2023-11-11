@@ -1,7 +1,8 @@
 
-/.vscode
-/temp
-/.env
-/test.py
 /__pycache__
-/dummy.py
+/.vscode
+/src/__pycache__
+/src/temp
+/src/dummy.py
+/src/test.py
+/.env
