@@ -1,5 +1,5 @@
 from flask import Flask, request
-import bot
+import tgbot
 from dotenv import load_dotenv
 
 
@@ -14,6 +14,6 @@ def index():
 
 @app.route("/webhook", methods=["POST"])
 def handle_webhook():
-    update = bot.Update.from_array(request.json)
-    bot.handle_update(update)
+    update = tgbot.Update.from_array(request.json)
+    tgbot.handle_update(update)
     return "ok", 200
