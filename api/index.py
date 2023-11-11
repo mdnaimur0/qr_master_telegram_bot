@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "ok", 200
+    return "ok"
 
 
 @app.route("/webhook", methods=["POST"])
